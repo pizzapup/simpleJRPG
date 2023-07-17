@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple JRPG</title>
+  </head>
+  <body>
+    <style>
+      #battleContainer {
+        display: flex;
+      }
+      .statsContainer {
+        flex: 1;
+        min-width: 0; /* Ensure content doesn't cause overflow */
+      }
+      .statusContainer {
+        height: 2.5em;
+      }
+    </style>
+    <div id="battleContainer">
+      <!-- PLAYER -->
+      <div id="playerStats" class="statsContainer">
+        <h2>Player</h2>
+        <ul>
+          <li>HP: <span id="playerHP"></span></li>
+          <li>Attack: <span id="playerAttack"></span></li>
+          <li>Defense: <span id="playerDefense"></span></li>
+        </ul>
+        <button id="playerAction">Attack</button>
+        <button id="playerDrinkPotion">Drink Potion</button>
+        <p>
+          <span id="playerStatus"></span><br />
+          <em id="playerStatusMsg"></em>
+        </p>
+      </div>
+
+      <!-- ENEMY -->
+      <div id="enemyStats" class="statsContainer">
+        <h2>Enemy</h2>
+        <ul>
+          <li>HP: <span id="enemyHP"></span></li>
+          <li>Attack: <span id="enemyAttack"></span></li>
+          <li>Defense: <span id="enemyDefense"></span></li>
+        </ul>
+        <button id="enemyAction">Attack</button>
+        <button id="enemyDrinkPotion">Drink Potion</button>
+        <p>
+          <span id="enemyStatus"></span><br />
+          <em id="enemyStatusMsg"></em>
+        </p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
